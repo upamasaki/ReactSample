@@ -12,34 +12,12 @@ import { getData } from './data';
 // ページ遷移に必要
 import { BrowserRouter, Route, Link  } from 'react-router-dom';
 
-import App2 from './App2';
 
-const PageOne = () => {
-    return (
-      <div>
-        PageOne
-        <Link to="/pagetwo">
-          <button>
-            show PageTwo when you click this!!
-          </button>
-        </Link>
-      </div>
-    );  
-};
+import PageHome from './pages/Home.js';
+import PageOne from './pages/PageOne.js';
+import PageTwo from './pages/PageTwo.js';
+import UploadVehicle from './pages/UploadVehicle'
 
-const PageTwo = () => {
-return (
-    <div>
-    PageTwo
-    <Link to="/">
-        <button>
-        show PageOne when you click this!!
-        </button>
-    </Link>
-        <App2/>
-    </div>
-);
-};
 
 class App extends React.Component {
   constructor(props) {
@@ -61,6 +39,8 @@ class App extends React.Component {
                 <div>
                 <Route path="/" exact component={PageOne} />
                 <Route path="/pagetwo"  component={PageTwo} />
+                <Route path="/PageHome"  component={PageHome} />
+                <Route path="/UploadVehicle"  component={UploadVehicle} />
                 </div>
             </BrowserRouter>
             </div>        
