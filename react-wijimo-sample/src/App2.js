@@ -12,8 +12,6 @@ import { getData } from './data';
 // ページ遷移に必要
 import { BrowserRouter, Route, Link  } from 'react-router-dom';
 
-import App2 from './App2';
-
 const PageOne = () => {
     return (
       <div>
@@ -36,12 +34,11 @@ return (
         show PageOne when you click this!!
         </button>
     </Link>
-        <App2/>
     </div>
 );
 };
 
-class App extends React.Component {
+class App2 extends React.Component {
   constructor(props) {
       super(props);
       this.data = getData();
@@ -64,7 +61,38 @@ class App extends React.Component {
                 </div>
             </BrowserRouter>
             </div>        
-          
+          <div className="row">
+              <div className="col-xs-5">
+                  <div className="form-group">
+                      <wjInput.MultiSelect placeholder="国を選択" headerFormat="{count:n0}個の国" displayMemberPath="country" showSelectAllCheckbox={this.state.showSelectAllCheckbox} showFilterInput={this.state.showFilterInput} itemsSource={this.data} checkedItemsChanged={this.onCheckedItemsChanged}>
+                      </wjInput.MultiSelect>
+                  </div>
+                  <div className="form-group">
+                      <label>
+                          「すべて選択」を表示
+                          <input id="selectAll" type="checkbox" checked={this.state.showSelectAllCheckbox} onChange={this.changeShowSelectAll}/>
+                      </label>
+                  </div>
+                  <div className="form-group">
+                      <label>
+                          「フィルター」を表示
+                          <input id="filter" type="checkbox" checked={this.state.showFilterInput} onChange={this.changeShowFilterInput}/>
+                      </label>
+                  </div>
+              </div>
+              <div className="col-xs-7">
+                  <p>
+                      <b>チェックされた項目:</b>
+                  </p>
+                  <ul>
+                      {this.state.checkedItems.map((item, index) => {
+                                return <li key={index}>
+                                                        {item.country}
+                                                    </li>;
+                            })}
+                    </ul>
+                </div>
+            </div>
         </div>;
                         }
   onCheckedItemsChanged(sender) {
@@ -78,4 +106,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App2;
