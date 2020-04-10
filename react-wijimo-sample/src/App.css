@@ -37,13 +37,6 @@
   }
 }
 
-.wj-multiselectlistbox {
-    max-height: 200px;
-    min-width: 190px;
-}
-label input {
-    margin-left: 3px !important;
-}
-body {
-    margin-bottom: 24pt;
+.wj-flexgrid .wj-cell {
+  height: 30px;
 }

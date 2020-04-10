@@ -1,12 +1,17 @@
 {
-  "name": "my-app",
+  "name": "react-wijimo-sample",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@grapecity/wijmo.angular2.all": "^5.20201.664",
+    "@grapecity/wijmo.cultures": "^5.20201.664",
+    "@grapecity/wijmo.react.all": "^5.20201.664",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "react-scripts": "^3.4.1"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "wijmo": "http://prerelease.componentone.com/wijmo5/npm-images/C1Wijmo-Enterprise-Eval-AMD-5.20172.359.tgz"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,14 +35,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "babel-loader": "^8.1.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "react-dom": "^16.13.1"
   }
 }
