@@ -11,6 +11,11 @@ import SelectColor from './../components/SelectColor'
 const UploadVehicle = () => {
   return (
     <div>
+      <Link to="/">
+        <button>
+          HOME
+        </button>
+      </Link>
       <Link to="/UploadVehicle">
         <button>
           show UploadVehicle when you click this!!
@@ -22,6 +27,7 @@ const UploadVehicle = () => {
       <h3>Criate a file</h3>
           <h3>Select Class</h3>
       <nav>
+        <SelectClass />
         <SelectClass />
         <SelectColor />
       </nav>

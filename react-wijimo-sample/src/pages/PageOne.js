@@ -23,6 +23,11 @@ const PageOne = () => {
           show PageHome when you click this!!
         </button>
         </Link>
+        <Link to="/UploadVehicle">
+        <button>
+          show UploadVehicle when you click this!!
+        </button>
+        </Link>
         <br />
         this page is PageHome!!!
         <br />
